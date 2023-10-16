@@ -16,7 +16,7 @@ contract DeployScript is ScaffoldETHDeploy {
         }
         vm.startBroadcast(deployerPrivateKey);
         YourContract yourContract = new YourContract(
-            vm.addr(deployerPrivateKey)
+            0x9C8ca52fA6f12fd7B70c6B6E9a2704149af676Ea
         );
         console.logString(
             string.concat(
