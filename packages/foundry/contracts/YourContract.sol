@@ -19,6 +19,7 @@ contract YourContract {
     bool public premium = false;
     uint256 public totalCounter = 0;
     mapping(address => uint256) public userGreetingCounter;
+    mapping(address => uint256) public myMap;
 
     // Events: a way to emit log statements from smart contract that can be listened to by external parties
     event GreetingChange(
@@ -32,6 +33,7 @@ contract YourContract {
     // Check packages/foundry/deploy/Deploy.s.sol
     constructor(address _owner) {
         owner = _owner;
+        myMap[0x9C8ca52fA6f12fd7B70c6B6E9a2704149af676Ea] = 420;
     }
 
     // Modifier: used to define a set of rules that must be met before or after a function is executed
